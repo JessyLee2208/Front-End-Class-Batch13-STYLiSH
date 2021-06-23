@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="男裝 女裝 飾品 ">
+    <title class="productList-title"></title>
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/product.css" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8QSJQFQ91"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-B8QSJQFQ91');
+    </script>
+
+
+</head>
+
+    
+    <!--頭部-->
+    <header>
+        <div class="header-content clearfix">
+            <a href="index.html" class="logo"> 
+                <img src="img/logo.png">
+            </a>
+           
+            <ul id="main-nav" class="main-nav">
+                <li ><a href="index.html?tag=women" class="WomenTag">女裝</a></li>
+                <li><p>|</p></li>
+                <li ><a href="index.html?tag=men" class="MenTag ">男裝</a></li>
+                <li><p>|</p></li>
+                <li ><a href="index.html?tag=accessories" class="AccessoriesTag ">配件</a></li>
+            </ul>
+
+            <div class="search">
+
+                <div  class = 'searchbar clearfix '>
+                    <input name='tag' type="search" style="border: 0px"><img class="inputicon" src="img/search.png">
+                </div>
+
+                <ul class='icons'>
+                    <li ><a href="cart.html"><div class="cart"><div class="count">0</div><img class="web" src="img/cart.png"><img class="mobile" src="img/cart-mobile.png"></div><p>購物車</p></a></li>
+                    <li ><div class="login"><img class="web" src="img/member.png"><img class="mobile" src="img/member-mobile.png"><p>會員</p></div></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--主體內容-->
+    <main>
+        
+        <div class="product">
+            <div class="snackbar"><p class="snackbar-content">已加入購物車</p><p class="confirm">確定</p></div>
+            <div class="top">
+                <img class="mainimg" src="">
+                <div class="product-detail ">
+                    <div class="product-basic ">
+                        <p class="product-title"></p>
+                        <p class="product-id"></p>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="product-setting colors">
+                        <p class="detail-title">顏色 |</p>
+                        <div class="colorbox"></div>
+                        
+                    </div>
+                    <div class="product-setting sizes">
+                        <p class="detail-title">尺寸 |</p>
+                        <div class="sizebox"></div>
+                    </div>
+                    <div class="product-setting quantity">
+                        <p class="detail-title">數量 |</p>
+                        <div class="quantitybox">
+                            <button class="decrement" >-</button>
+                            <div class="num" value="1">1</div>
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                    <button class="addcar">加入購物車</button>
+                    <pre class="product-detail-description">
+                    </pre>
+                </div>
+            </div>
+
+            <div class="seperator">細部說明</div>
+            <div class="detail-description">O.N.S is all about options, which is why we took our staple polo shirt and upgraded it with slubby linen jersey, making it even lighter for those who prefer their summer style extra-breezy.</div>
+            <div class="images"></div>
+        </div>
+
+    </main>
+    <footer class="clearfix">
+        <div class="footer-content">
+            <ul>
+                <li><a href="#" class="about">關於 Stylish</a><p>|</p></li>
+
+                <li><a href="#">服務條款</a><p>|</p></li>
+
+                <li><a href="#">隱私政策</a><p>|</p></li>
+
+                <li><a href="#">聯絡我們</a><p>|</p></li>
+
+                <li><a href="#">FAQ</a></li>
+            </ul>
+            <div class="socialmedia">
+                <img src="img/line.png" alt="socialmedia-line"/>
+                <img src="img/twitter.png" alt="socialmedia-twitter"/>
+                <img src="img/facebook.png" alt="socialmedia-facebook"/>
+                
+            </div>
+            <p>© 2018. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+
+<script src="js/productDetail.js" type="module"></script>
+</html>

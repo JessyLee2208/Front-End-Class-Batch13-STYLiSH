@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+p,
+label {
+    font-family: NotoSansCJKtc;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: normal;
+    text-decoration: none;
+    /* text-align: left; */
+    color: #3f3a3a;
+}
+
+li {
+    list-style: none;
+}

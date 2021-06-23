@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="thankyou" />
+    <title>STYLiSH 2021</title>
+    <!--CSS LINK-->
+    <link href="./css/header.css" rel="stylesheet" />
+    <link href="./css/footer.css" rel="stylesheet" />
+    <link href="./css/thankyou.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--頭部-->
+    <header>
+      <div class="header-content clearfix">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" />
+        </a>
+
+        <ul id="main-nav" class="main-nav">
+          <li><a href="index.html?tag=women" class="WomenTag">女裝</a></li>
+          <li><p>|</p></li>
+          <li><a href="index.html?tag=men" class="MenTag">男裝</a></li>
+          <li><p>|</p></li>
+          <li><a href="index.html?tag=accessories" class="AccessoriesTag">配件</a></li>
+        </ul>
+
+        <div class="search">
+          <div class="searchbar clearfix">
+            <input name="tag" type="search" style="border: 0px" /><img class="inputicon" src="img/search.png" />
+          </div>
+
+          <ul class="icons">
+            <li>
+              <a href="cart.html"
+                ><div class="cart">
+                  <div class="count">0</div>
+                  <img class="web" src="img/cart.png" /><img class="mobile" src="img/cart-mobile.png" />
+                </div>
+                <p>購物車</p></a
+              >
+            </li>
+            <li>
+              <div class="login">
+                <img class="web" src="img/member.png" />
+                <img class="mobile" src="img/member-mobile.png" />
+                <p>會員</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--主體內容-->
+    <main>
+      <div class="thankyou">
+        <h2>感謝您的購買，我們會盡快將商品送達！</h2>
+        <p>請記住以下訂單編號，以便查詢</p>
+        <div class="userNumber"></div>
+        <a href="index.html">繼續購物</a>
+      </div>
+    </main>
+    <footer class="clearfix">
+      <div class="footer-content">
+        <ul>
+          <li>
+            <a href="#" class="about">關於 Stylish</a>
+            <p>|</p>
+          </li>
+
+          <li>
+            <a href="#">服務條款</a>
+            <p>|</p>
+          </li>
+
+          <li>
+            <a href="#">隱私政策</a>
+            <p>|</p>
+          </li>
+
+          <li>
+            <a href="#">聯絡我們</a>
+            <p>|</p>
+          </li>
+
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="socialmedia">
+          <img src="img/line.png" alt="socialmedia-line" />
+          <img src="img/twitter.png" alt="socialmedia-twitter" />
+          <img src="img/facebook.png" alt="socialmedia-facebook" />
+        </div>
+        <p>© 2018. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <!--API GET-->
+  <script src="js/thankyou.js" type="module"></script>
+</html>

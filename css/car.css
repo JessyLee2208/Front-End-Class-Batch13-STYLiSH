@@ -1,0 +1,535 @@
+.input .recipients-errornote,
+.input .email-errornote,
+.input .phoneNum-errornote,
+.input .address-errornote,
+.input .email-cardNumber,
+.input .card-expiration-date,
+.input .card-ccv {
+  float: left;
+  position: absolute;
+  top: 30px;
+  font-size: 14;
+  color: red;
+  /* margin-left: 5px; */
+  opacity: 0;
+}
+.input .active {
+  float: left;
+  position: absolute;
+  top: 30px;
+  font-size: 14;
+  color: red;
+  margin-left: 5px;
+  opacity: 1;
+}
+.dialog {
+  display: none;
+  position: fixed;
+  top: 10vh;
+
+  width: 100vw;
+  height: 100vw;
+
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+  background-color: #fff;
+  color: #fff;
+}
+.dialog.show {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog .loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #4d4d4d;
+  margin-top: 300px;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  display: flex;
+}
+
+.dialog p {
+  font-size: 16px;
+  color: #3f3a3a;
+  padding-top: 10px;
+}
+
+body {
+  height: 100vh;
+  overflow-y: show;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.carListFrom {
+  min-width: 312px;
+  width: auto;
+  padding: 100px 40px 0 40px;
+}
+
+select {
+  padding: 7px 10px 7px 17px;
+  border-radius: 8px;
+  border: solid 1px #979797;
+  background-color: #f3f3f3;
+  outline: none;
+}
+
+.description {
+  font-family: NotoSansCJKtc;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: normal;
+  color: #3f3a3a;
+}
+
+.carListFromTitle {
+  display: flex;
+  margin-right: 50px;
+}
+.carListFromTitle .fromTitle,
+.carListFromTitle .fromTitle p {
+  display: flex;
+  font-family: NotoSansCJKtc;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f3a3a;
+
+  width: 64%;
+}
+.carListFromTitle p {
+  display: none;
+}
+
+.carListFrom .carListItem .productDetail label {
+  display: block;
+  height: 24px;
+  margin: center;
+}
+.carListFrom .carListItem .productDetail p {
+  font-size: 16px;
+  color: #3f3a3a;
+}
+
+.carListFrom .carListItem.productDetail .select label {
+  margin-bottom: 0px;
+}
+.carListFrom .carListItem .productDetail .mainimg {
+  max-width: 114px;
+  width: auto;
+}
+
+.carListFrom .carListItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.carListFrom .carListItem .itemDetail {
+  border-top: solid 1px #979797;
+  border-bottom: solid 1px #979797;
+  width: 100%;
+  position: relative;
+}
+.carListFrom .carListItem .productDetail {
+  display: flex;
+  padding: 12px 0 10px 0;
+  width: 100%;
+  margin: auto;
+}
+
+.carListFrom .carListItem .select,
+.carListFrom .carListItem .price,
+.carListFrom .carListItem .subtotal {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  margin: auto;
+}
+
+.carListFrom .carListItem select {
+  width: 80px;
+  height: 30px;
+  margin: auto;
+}
+.carListFrom .carListItem .productDetail .declarer {
+  padding-left: 20px;
+}
+.carListFrom .carListItem .productDetail .declarer p {
+  font-family: NotoSansCJKtc;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f3a3a;
+}
+
+.carListFrom .carListItem .productDetail .declarer .title {
+  padding-bottom: 20px;
+  width: 100%;
+}
+.carListFrom .carListItem .productDetail .declarer .id {
+  padding-bottom: 24px;
+}
+.carListFrom .carListItem .productDetail .declarer .color {
+  padding-bottom: 12px;
+}
+.carListFrom .carListItem .removeicon {
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+
+/*   */
+.carListFrom .selectDeliveryAndDeal {
+  margin-top: 18px;
+  background: #e8e8e8;
+  width: 100%;
+}
+.carListFrom .selectDeliveryAndDeal label {
+  padding-right: 8px;
+}
+.carListFrom .selectDeliveryAndDeal .delivery,
+.carListFrom .selectDeliveryAndDeal .payment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.description {
+  padding: 16px 0;
+  width: 100%;
+  text-align: left;
+}
+
+/*  */
+.form-header {
+  font-size: 14px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-bottom: solid 1px #979797;
+}
+
+.orderInfor .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.orderInfor .form .input {
+  width: 100%;
+  margin-top: 6px;
+  position: relative;
+}
+input:focus {
+  outline: none;
+}
+
+input#phoneNum,
+input#address,
+input#email,
+input#recipients,
+.tpfield {
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 1px #979797;
+  padding: 0 4px;
+}
+
+input#morning,
+input#afternoon,
+input#noSpecific {
+  padding-top: 5px;
+  width: 16px;
+  height: 16px;
+  margin: 4px 6px 0 0;
+  border: solid 1px #979797;
+  padding-top: 5px;
+}
+
+.orderInfor .form .input label {
+  display: block;
+  margin-right: 18px;
+  line-height: 26px;
+  font-size: 14px;
+  color: #3f3a3a;
+}
+.orderInfor .form .input {
+  display: flex;
+}
+.orderInfor .form .input .time {
+  display: flex;
+  margin-right: 10px;
+}
+
+.closeAccount {
+  border-top: solid 1px #979797;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  margin-bottom: 40px;
+  padding-top: 30px;
+}
+.closeAccount label {
+  line-height: 40px;
+}
+.sum,
+.freight,
+.total {
+  width: 240px;
+  margin-left: auto;
+  display: flex;
+  margin: 10px 0 10px auto;
+}
+.freight {
+  border-bottom: solid 1px #979797;
+  padding-bottom: 20px;
+}
+.pay {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-left: auto;
+  margin-top: 30px;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+.pay-disable {
+  background-color: rgb(177, 177, 177);
+  cursor: not-allowed;
+}
+.closeAccount .value {
+  float: right;
+  /* position: absolute; */
+  margin-left: auto;
+  right: 0;
+}
+.closeAccount .value span {
+  font-family: NotoSansCJKtc;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f3a3a;
+}
+
+@media only screen and (min-width: 1024px) {
+  label {
+    font-size: 16px;
+    color: #3f3a3a;
+  }
+
+  .carListFrom {
+    padding-top: 160px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  .carListFromTitle {
+    padding: 10px 0;
+  }
+  .carListFromTitle p {
+    display: flex;
+    font-size: 15px;
+    color: #3f3a3a;
+    width: 16%;
+  }
+
+  .carListFrom .carListItem {
+    border: solid 1px #979797;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .carListFrom .carListItem .itemDetail {
+    display: flex;
+    padding: 0px 24px;
+    width: 100%;
+    border: 0;
+  }
+  .carListFrom .carListItem .itemDetail label {
+    display: none;
+  }
+
+  .carListFrom .carListItem .productDetail {
+    display: flex;
+    width: 48%;
+    padding: 12px;
+  }
+  .carListFrom .carListItem .select {
+    width: 12%;
+    margin: auto;
+  }
+  .carListFrom .carListItem select {
+    width: 80px;
+    height: 30px;
+  }
+
+  .carListFrom .carListItem .subtotal {
+    width: 16%;
+  }
+  .carListFrom .carListItem .removeicon {
+    position: static;
+    flex-grow: 1;
+    margin: auto;
+  }
+  .carListFrom .carListItem .icon {
+    width: 44px;
+    height: 44px;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .carListFrom .carListItem .productDetail .mainimg {
+    max-width: 114px;
+    width: 100%;
+  }
+  .carListFrom .carListItem .productDetail .declarer {
+    padding-left: 20px;
+    width: 100%;
+  }
+  .carListFrom .carListItem .productDetail .declarer p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .carListFrom .carListItem .productDetail .declarer .id {
+    padding-bottom: 22px;
+  }
+  .carListFrom .carListItem .productDetail .declarer .color {
+    padding-bottom: 10px;
+  }
+
+  /*    */
+
+  .carListFrom .selectDeliveryAndDeal {
+    background: #e8e8e8;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .carListFrom .selectDeliveryAndDeal label {
+    padding-right: 12px;
+  }
+  .carListFrom .selectDeliveryAndDeal .delivery,
+  .carListFrom .selectDeliveryAndDeal .payment {
+    width: auto;
+    display: block;
+    padding: 20px 80px 20px 32px;
+  }
+
+  input#morning,
+  input#afternoon,
+  input#noSpecific {
+    margin: 4px 10px 0 0;
+  }
+
+  .orderInfor .form {
+    display: flex;
+    margin-top: 30px;
+  }
+  .orderInfor .form .input {
+    width: 574px;
+  }
+  .orderInfor .form label {
+    width: 120px;
+  }
+
+  .closeAccount {
+    border-top: solid 1px #979797;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    margin-bottom: 200px;
+    padding-top: 30px;
+  }
+  .closeAccount label {
+    line-height: 40px;
+  }
+  .sum,
+  .freight,
+  .total {
+    width: 240px;
+    margin-left: auto;
+    display: flex;
+    margin: 10px 0 10px auto;
+  }
+  .freight {
+    border-bottom: solid 1px #979797;
+    padding-bottom: 20px;
+  }
+  .pay {
+    width: 240px;
+    height: 60px;
+    background-color: black;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-left: auto;
+    color: #ffffff;
+
+    cursor: pointer;
+  }
+  .pay-disable {
+    background-color: rgb(233, 233, 233);
+    cursor: not-allowed;
+  }
+  .closeAccount .value {
+    float: right;
+    margin-left: auto;
+    right: 0;
+  }
+  .closeAccount .value span {
+    font-family: NotoSansCJKtc;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3f3a3a;
+  }
+}

@@ -1,0 +1,35 @@
+.thankyou {
+    padding: 200px 0 100px 0;
+    max-width: 1080px;
+    height: calc(100vh - 100px);
+    /* width: auto; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.thankyou h2 {
+    font-size: 20px;
+    padding: 12px;
+    color: black;
+    border-bottom: black solid 1px;
+    text-align: center;
+}
+.thankyou p {
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 24px;
+    color: black;
+}
+
+.thankyou .userNumber {
+    background-color: #eeeeee;
+
+    padding: 5px 10px;
+    align-self: center;
+}
+.thankyou a {
+    margin-top: 36px;
+    color: black;
+}
